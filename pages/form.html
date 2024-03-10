@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form HTML</title>
+</head>
+<body>
+    <!-- for apabila di klik akan fokus ke input -->
+    <form action="/submit" method="post">
+        <label for="usn">Nama</label><br>
+        <input type="text" id="usn" name="usn" placeholder="Nama Lengkap"><br><br>
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" placeholder="Email"><br><br>
+        <label for="nohp">No Hp</label><br>
+        <input type="number" id="nohp" name="nohp" placeholder="No Hp"><br><br>
+
+        <label for="">Jenis Kelamin</label><br>
+        <input type="radio" name="lk" id="lk">
+        <label for="lk">Laki Laki</label><br>
+        <input type="radio" name="lk" id="pr">
+        <label for="pr">Perempuan</label><br><br>
+
+        <label for="idol">Prodi</label><br>
+        <!-- multiple="2" untuk pilih opsi >2 -->
+        <select name="idol" id="idol" >
+            <option value="">Pilih</option>
+            <optgroup label="Teknik Informatika">
+                <option value="bts">S1 teknik Informatika</option>
+                <option value="txt">S1 Sistem Informasi</option>
+            </optgroup>
+            <optgroup label="Teknik Mesin">
+                <option value="bts">S1 Teknik Mesin</option>
+                <option value="txt">S1 Pendidikan</option>
+            </optgroup>       
+        </select>
+        <br>
+        <label for="hobi">Hobi :</label>
+        <br>
+        <input type="checkbox" id="read" name="hobi" value="read">
+        <label for="read">Membaca</label>
+        <br>
+        <input type="checkbox" id="writing" name="hobi" value="writing">
+        <label for="writing">Menulis</label>
+        <br>
+        <input type="checkbox" id="sing" name="hobi" value="sing">
+        <label for="sing">Menyanyi</label>
+        <br>
+        <input type="checkbox" id="sport" name="hobi" value="sport">
+        <label for="sport">Olahraga</label>
+        <br><br>
+        <label for="address">Alamat</label><br>
+        <textarea name="address" id="address" cols="20" rows="5" placeholder="Alamat Lengkap"></textarea>
+        <br><br>
+        <label for="berkas">Foto Diri</label>
+        <br>
+        <input type="file" name="berkas" id="berkas" accept=".jpg, .jpeg, .png">
+        <br>
+        <input type="submit" value="Daftar">
+    </form>
+</body>
+</html>
