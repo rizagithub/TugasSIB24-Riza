@@ -12,7 +12,7 @@
             padding: 0;
         }
         nav {
-            background-color: #333;
+
             overflow: hidden;
         }
         nav ul {
@@ -26,7 +26,7 @@
         }
         nav li a {
             display: block;
-            color: white;
+            color: rgb(23, 21, 21);
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
@@ -42,13 +42,6 @@
         display: flex;
         justify-content: space-between; /* Membuat dua kolom berada di sisi kiri dan kanan */
         }
-        .column {
-            width: 50%; /* Lebar setiap kolom */
-            padding: 20px;
-        }
-        .column p {
-            text-align: left; /* Menjadikan paragraf di kolom kiri menjadi rata kiri */
-        }
         .carousel-container {
         width: 500px;
         margin: 0 auto;
@@ -60,7 +53,7 @@
             transition: transform 0.5s ease;
         }
         .carousel img {
-            width: 80%;
+            width: 100%;
             height: auto;
         }
         .prev, .next {
@@ -82,47 +75,34 @@
     </style>
 </head>
 <body>   
+    <!-- Navbar dan Carousel -->
     <container>
         <div>
             <nav>    
-                <ul>   
+                <ul>  
+                    <li><a href="https://arkatama.id/" target=""><img src="./assets/images/image.png" alt="Logo" width="110"></a></li>
                     <li><a href="">Home</a></li>
                     <li><a href="./pages/form.html" target="_blank">Form</a></li>
                     <li><a href="./pages/js.html">javascript</a></li>
                 </ul>    
             </nav>
         </div>
+
         <div class="jumbotron">
-            <h1 class="text">WELCOME TO MY LANDING PAGE</h1>
-            <div class="container">
-                <div class="column">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsam, dolore! Beatae assumenda rem dolore, nulla ad tempora dolorem? Beatae facere incidunt sequi.
-                    Nihil recusandae fugit numquam maxime porro quis accusamus?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsam, dolore! Beatae assumenda rem dolore, nulla ad tempora dolorem? Beatae facere incidunt sequi.
-                    Nihil recusandae fugit numquam maxime porro quis accusamus?<br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsam, dolore! Beatae assumenda rem dolore, nulla ad tempora dolorem? Beatae facere incidunt sequi.
-                    Nihil recusandae fugit numquam maxime porro quis accusamus? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsam, dolore! Beatae assumenda rem dolore, nulla ad tempora dolorem? Beatae facere incidunt sequi.
-                    Nihil recusandae fugit numquam maxime porro quis accusamus?
-                    </p>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <img src="./assets/images/c1.png" alt="Image 1">
+                    <img src="./assets/images/c2.png">
+                    <img src="./assets/images/c1.png">
                 </div>
-                <div class="column">
-                    <div class="carousel-container">
-                        <div class="carousel">
-                            <img src="./assets/images/karina.jpg" alt="Image 1">
-                            <img src="./assets/images/karina2.jpg">
-                            <img src="./assets/images/karina.jpg">
-                        </div>
-                        <div class="prev" onclick="prevSlide()">&#10094;</div>
-                        <div class="next" onclick="nextSlide()">&#10095;</div>
-                    </div>
-                </div>
+                <div class="prev" onclick="prevSlide()">&#10094;</div>
+                <div class="next" onclick="nextSlide()">&#10095;</div>
             </div>
         </div>
+
     </container>
+
+    <!-- Script untuk javascript -->
     <script>
         let currentIndex = 0;
         const slides = document.querySelectorAll('.carousel img');
@@ -143,9 +123,10 @@
             showSlide(currentIndex);
         }
     
-        setInterval(nextSlide, 5000); // Ganti gambar setiap 5 detik
+        setInterval(nextSlide, 2000); // Ganti gambar setiap 2 detik
     
         showSlide(currentIndex); // Tampilkan slide pertama saat halaman dimuat
+
     </script>
 </body>
 </html>
