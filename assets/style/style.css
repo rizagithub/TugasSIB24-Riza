@@ -1,0 +1,67 @@
+
+.body {
+    font-family: 'poppins';
+    margin: 0;
+    padding: 0;
+}
+nav {
+
+    overflow: hidden;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+nav li {
+    float: left;
+}
+nav li a {
+    display: block;
+    color: rgb(23, 21, 21);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+nav li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.jumbotron{
+    text-align: center;
+}
+.container {
+display: flex;
+justify-content: space-between; /* Membuat dua kolom berada di sisi kiri dan kanan */
+}
+.carousel-container {
+width: 500px;
+margin: 0 auto;
+overflow: hidden;
+position: relative;
+}
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.carousel img {
+    width: 100%;
+    height: auto;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+.prev {
+    left: 0;
+}
+.next {
+    right: 0;
+}
+
