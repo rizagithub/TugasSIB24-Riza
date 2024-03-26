@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./assets/style/dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Admin Dashboard</h2>
+        <a href="./form/formadd.html"> <button class="button">Tambah Data</button></a>    
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nama</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>john@example.com</td>
+                    <td>
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jane Smith</td>
+                    <td>jane@example.com</td>
+                    <td>
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </td>
+                </tr>
+                <!-- Tambahkan data lainnya sesuai kebutuhan -->
+            </tbody>
+        </table>
+        <br>     
+        <a class="logout" href="./form/login.html"><button class="delete">Logout</button></a> 
+    </div>
+
+</body>
+</html>
+
+
+ADD Data
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Data Form</title>
+    <link rel="stylesheet" href="../assets/style/formadd.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Add Data Form</h2>
+        <form>
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" placeholder="Nama" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>  
+
+            <label for="email">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>  
+            
+            
+        </form>
+        <a href="../dashboard.html"><button class="button">Tambah Data</button></a>
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Data Form</title>
+    <link rel="stylesheet" href="../assets/style/formadd.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Add Data Form</h2>
+        <form id="addForm">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" placeholder="Nama" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>  
+<!-- 
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>   -->
+            
+            <button type="submit" class="button">Tambah Data</button>
+        </form>
+    </div>
+
+    <script src="../assets/js/data.js"></script>
+    <script>
+        document.getElementById("addForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Mencegah form untuk melakukan submit default
+
+            // Ambil nilai dari form
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            // var password = document.getElementById("password").value;
+
+            // Tambahkan data ke dalam array
+            addData(name, email);
+
+            // Redirect ke halaman dashboard setelah menambahkan data
+            window.location.href = "../dashboard.html";
+        });
+    </script>
+</body>
+</html>

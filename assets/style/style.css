@@ -70,4 +70,33 @@ position: relative;
     margin-top: 50px;
 }
 
+.button {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
+.login{
+    display:flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+/* Media query untuk perangkat mobile */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Mengubah tata letak menjadi satu kolom saat layar kecil */
+    }
+
+    .carousel img {
+        width: 70%;
+        height: auto;
+    }
+
+    .carousel-container {
+        width: 100%; /* Lebar slider mengisi lebar layar saat layar kecil */
+    }
+}

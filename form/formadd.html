@@ -1,0 +1,41 @@
+<!-- formadd.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Data Form</title>
+    <link rel="stylesheet" href="../assets/style/formadd.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Add Data Form</h2>
+        <form id="addForm">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" placeholder="Nama" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>  
+
+            <button type="submit" class="button">Tambah Data</button>
+        </form>
+    </div>
+
+    <script src="../assets/js/data.js"></script>
+    <script>
+        document.getElementById("addForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Mencegah form untuk melakukan submit default
+
+            // Ambil nilai dari form
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+
+            // Tambahkan data ke dalam array
+            addData(name, email);
+
+            // Redirect ke halaman dashboard setelah menambahkan data
+            window.location.href = "../dashboard.html";
+        });
+    </script>
+</body>
+</html>

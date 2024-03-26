@@ -1,0 +1,53 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./assets/style/dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Admin Dashboard</h2>
+        <a href="./form/formadd.html"> <button class="button">Tambah Data</button></a>    
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nama</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="userDataBody">
+                <!-- Data akan ditampilkan di sini -->
+            </tbody>
+        </table>
+        <br>     
+        <a class="logout" href="./form/login.html"><button class="delete">Logout</button></a> 
+    </div>
+
+    <script src="./assets/js/data.js"></script>
+    <script>
+        // Menggunakan variabel userData yang telah dideklarasikan di dalam file data.js
+        var userDatas = getAllData();
+
+        // Membuat baris tabel untuk setiap data
+        var tableBody = document.getElementById("userDataBody");
+        userDatas.forEach(function(user) {
+            var row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${user.id}</td>
+                <td>${user.name}</td>
+                <td>${user.email}</td>
+                <td>
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </td>
+            `;
+            tableBody.appendChild(row);
+        });
+    </script>
+</body>
+</html>
